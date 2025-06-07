@@ -1,43 +1,103 @@
-*{
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #ccc;
 }
 
-body{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #0d6efd;
+.nav ul {
+    list-style: none;
+    background: #006600;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-.wrapper{
-    width: 500px;
-    height: min-content;
-    padding: 50px;
-    border-radius: 15px;
-    background-color: #fff;
+.nav li {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 40px;
+    text-align: left;
 }
 
-.wrapper h1{
-    font-size: 40px;
-    margin-bottom: 10px;
-
-
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid #999980;
+    transition: .3s;
 }
 
-.wrapper form{
-    font-size: 20px;
-
+.nav a:hover {
+    background-color: #005f5f;
 }
 
-.wrapper form input[type="submit"]{
-    font-size: 20px;
-    margin-top: 15px;
-    bottom: 10px;
+.nav li li {
+    font-size: .8em;
+}
 
+/* ตามหน้าจอ */
+@media screen and (min-width: 650px) {
+    
+    .nav li {
+        width: 130px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        margin-right: -4px;
+
+    }
+
+    .nav a {
+    border-bottom: none;
+    }
+
+    .nav > ul > li {
+    text-align: center;
+    
+    }
+
+    .nav > ul > li > a {
+        padding-left: 0%;
+    }
+
+    /* เเทบข้างล่าง */
+    .nav li ul {
+        position: absolute;
+        display: none;
+        width: inherit;
+    }
+
+    .nav li:hover  ul {
+        display:block;
+
+    }
+
+    .nav li ul li {
+        display: block;
+
+
+    }
 }
-p {
-    font-size: 18px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
